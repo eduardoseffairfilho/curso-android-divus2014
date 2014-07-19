@@ -3,6 +3,7 @@ package com.divus.gchelloworld;
 import android.app.Activity;
 import android.os.Bundle;
 import android.util.Log;
+import com.divus.academia.android.gchelloworld.R;
 
 public class MainActivity extends Activity {
 
