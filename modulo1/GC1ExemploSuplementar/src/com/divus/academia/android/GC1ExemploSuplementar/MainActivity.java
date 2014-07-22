@@ -1,4 +1,4 @@
-package com.academia.android.exemplo;
+package com.divus.academia.android.GC1ExemploSuplementar;
 
 import android.app.Activity;
 import android.app.AlertDialog;
@@ -11,6 +11,7 @@ import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
+import com.divus.academia.android.GC1ExemploSuplementar.R;
 
 
 public class MainActivity extends Activity {

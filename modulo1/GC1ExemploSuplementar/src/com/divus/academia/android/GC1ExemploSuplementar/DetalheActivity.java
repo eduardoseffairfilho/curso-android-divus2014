@@ -1,10 +1,11 @@
-package com.academia.android.exemplo;
+package com.divus.academia.android.GC1ExemploSuplementar;
 
 import android.app.Activity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.TextView;
+import com.divus.academia.android.GC1ExemploSuplementar.R;
 
 public class DetalheActivity extends Activity {
 
