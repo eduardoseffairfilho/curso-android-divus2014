@@ -1,9 +1,9 @@
-package com.divus.gchelloworld;
+package com.divus.academia.android.GC1HelloWorld;
 
 import android.app.Activity;
 import android.os.Bundle;
 import android.util.Log;
-import com.divus.academia.android.gchelloworld.R;
+import com.divus.academia.android.GC1HelloWorld.R;
 
 public class MainActivity extends Activity {
 
