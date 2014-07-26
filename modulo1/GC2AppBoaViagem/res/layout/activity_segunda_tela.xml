@@ -21,54 +21,51 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginTop="5sp">
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="5sp"
+        android:paddingTop="20dp">
 
         <ImageView
             android:id="@+id/imgNovoGasto"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentLeft="true"
             android:layout_alignParentTop="true"
-            android:layout_centerHorizontal="false"
-            android:layout_centerInParent="false"
-            android:layout_marginLeft="50dp"
-            android:layout_marginTop="20dp"
+            android:layout_centerHorizontal="true"
+            android:paddingRight="70dp"
             android:contentDescription="@string/desc_novo_gasto"
             android:src="@drawable/novo_gasto" />
-
+        
         <ImageView
             android:id="@+id/imgNovaViagem"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_toRightOf="@+id/imgNovoGasto"
-            android:layout_marginRight="50dp"
-            android:layout_marginLeft="20dp"
-            android:layout_marginTop="20dp"
-            android:src="@drawable/nova_viagem"
-            android:contentDescription="@string/desc_nova_viagem"/>
-
-        <ImageView
-            android:id="@+id/imgMinhasViagens"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignLeft="@+id/imgNovaViagem"
-            android:layout_below="@+id/imgNovaViagem"
-            android:layout_marginTop="20dp"
-            android:contentDescription="@string/desc_minhas_viagens"
-            android:src="@drawable/minhas_viagens" />
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:paddingLeft="70dp"
+            android:contentDescription="@string/desc_nova_viagem"
+            android:src="@drawable/nova_viagem" />
 
         <ImageView
             android:id="@+id/imgConfiguracoes"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/imgNovoGasto"
-            android:layout_marginLeft="20dp"
-            android:layout_marginTop="20dp"
-            android:layout_toLeftOf="@+id/imgNovaViagem"
+            android:layout_centerHorizontal="true"
+            android:paddingRight="70dp"
             android:contentDescription="@string/desc_configuracoes"
             android:src="@drawable/configuracoes" />
         
+        <ImageView
+            android:id="@+id/imgMinhasViagens"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/imgNovaViagem"
+            android:layout_centerHorizontal="true"
+            android:paddingLeft="70dp"
+            android:contentDescription="@string/desc_minhas_viagens"
+            android:src="@drawable/minhas_viagens" />
+
     </RelativeLayout>
 
 </LinearLayout>
