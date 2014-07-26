@@ -1,11 +1,10 @@
 package com.divus.academia.android.GC2AppBoaViagem;
 
-import com.divus.academia.android.GC2AppBoaViagem.R;
-
 import android.app.Activity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 
 
 public class SegundaTelaActivity extends Activity {
@@ -14,6 +13,14 @@ public class SegundaTelaActivity extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_segunda_tela);
+	}
+	
+	public void selecionarMinhasConfiguracoes(View v) {
+		System.out.println("metodo selecionarMinhasConfiguracoes");
+	}
+	
+	public void selecionarMinhasViagens(View v) {
+		System.out.println("metodo selecionarMinhasViagens");
 	}
 
 	@Override

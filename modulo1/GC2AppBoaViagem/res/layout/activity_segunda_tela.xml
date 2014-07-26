@@ -43,7 +43,8 @@
             android:layout_alignParentTop="true"
             android:layout_marginRight="50dp"
             android:src="@drawable/nova_viagem"
-            android:contentDescription="@string/desc_nova_viagem"/>
+            android:contentDescription="@string/desc_nova_viagem"
+            android:onClick=""/>
 
         <ImageButton
             android:id="@+id/imgMinhasViagens"
