@@ -13,5 +13,8 @@
     <string name="desc_nova_viagem">Nova Viagem</string>
     <string name="desc_minhas_viagens">Minhas Viagens</string>
     <string name="desc_configuracoes">Configurações</string>
+    <string name="title_activity_despesas">DespesasActivity</string>
+    <string name="novo">Novo</string>
+    <string name="excluir">Excluir</string>
 
 </resources>
