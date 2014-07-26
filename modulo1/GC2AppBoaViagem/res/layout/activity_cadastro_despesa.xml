@@ -31,7 +31,7 @@
             android:text="Categoria" />
 
         <Spinner
-            android:id="@+id/categoria"
+            android:id="@+id/spnCategoria"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:entries="@array/categoria_despesas">
@@ -62,11 +62,11 @@
                     android:inputType="numberDecimal" />
 
                 <Button
-                    android:id="@+id/data"
+                    android:id="@+id/btnData"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:onClick="selecionarData"
+                    android:onClick="selecionarDataOnclick"
                     android:text="Selecione" />
             </TableRow>
         </TableLayout>
@@ -77,7 +77,7 @@
             android:text="Descrição" />
 
         <EditText
-            android:id="@+id/descricao"
+            android:id="@+id/edtDescricao"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="text" />
