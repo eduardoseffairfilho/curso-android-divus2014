@@ -14,6 +14,7 @@
         android:id="@+id/textView1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
         android:gravity="center"
         android:text="@string/app_name"
         android:textSize="30sp" />
@@ -29,8 +30,10 @@
             android:layout_height="wrap_content"
             android:layout_alignParentLeft="true"
             android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="false"
+            android:layout_centerInParent="false"
             android:layout_marginLeft="50dp"
-            android:layout_marginTop="50dp"
+            android:layout_marginTop="20dp"
             android:contentDescription="@string/desc_novo_gasto"
             android:src="@drawable/novo_gasto" />
 
@@ -38,10 +41,10 @@
             android:id="@+id/imgNovaViagem"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentRight="true"
-            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@+id/imgNovoGasto"
             android:layout_marginRight="50dp"
-            android:layout_marginTop="50dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
             android:src="@drawable/nova_viagem"
             android:contentDescription="@string/desc_nova_viagem"/>
 
@@ -49,10 +52,9 @@
             android:id="@+id/imgMinhasViagens"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignBottom="@id/imgNovoGasto"
-            android:layout_alignParentBottom="true"
-            android:layout_alignParentLeft="true"
-            android:layout_marginLeft="50dp"
+            android:layout_alignLeft="@+id/imgNovaViagem"
+            android:layout_below="@+id/imgNovaViagem"
+            android:layout_marginTop="20dp"
             android:contentDescription="@string/desc_minhas_viagens"
             android:src="@drawable/minhas_viagens" />
 
@@ -60,12 +62,12 @@
             android:id="@+id/imgConfiguracoes"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:layout_alignParentRight="true"
-            android:layout_marginRight="50dp"
-            android:layout_marginBottom="100dp"
-            android:src="@drawable/configuracoes"
-            android:contentDescription="@string/desc_configuracoes"/>
+            android:layout_below="@+id/imgNovoGasto"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_toLeftOf="@+id/imgNovaViagem"
+            android:contentDescription="@string/desc_configuracoes"
+            android:src="@drawable/configuracoes" />
         
     </RelativeLayout>
 
