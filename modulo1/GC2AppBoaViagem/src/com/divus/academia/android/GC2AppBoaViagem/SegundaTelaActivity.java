@@ -1,10 +1,13 @@
 package com.divus.academia.android.GC2AppBoaViagem;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Toast;
 
 
 public class SegundaTelaActivity extends Activity {
@@ -15,12 +18,25 @@ public class SegundaTelaActivity extends Activity {
 		setContentView(R.layout.activity_segunda_tela);
 	}
 	
-	public void selecionarMinhasConfiguracoes(View v) {
-		System.out.println("metodo selecionarMinhasConfiguracoes");
+	public void despesasOnclick(View v) {
+		Log.d("SegundaTela", "método despesasOnclick");
+		Intent intent = new Intent(this, DespesasActivity.class);
+		startActivity(intent);
 	}
 	
-	public void selecionarMinhasViagens(View v) {
-		System.out.println("metodo selecionarMinhasViagens");
+	public void viagensOnclick(View v) {
+		Log.d("SegundaTela", "método viagensOnclick");
+		Toast.makeText(this, "método viagensOnclick", Toast.LENGTH_LONG).show();
+	}
+	
+	public void minhasViagensOnclick(View v) {
+		Log.d("SegundaTela", "método minhasViagensOnclick");
+		Toast.makeText(this, "método minhasViagensOnclick", Toast.LENGTH_LONG).show();
+	}
+	
+	public void configuracoesOnclick(View v) {
+		Log.d("SegundaTela", "método configuracoesOnclick");
+		Toast.makeText(this, "método configuracoesOnclick", Toast.LENGTH_LONG).show();
 	}
 
 	@Override
