@@ -1,6 +1,7 @@
 package com.divus.academia.android.GC2AppBoaViagem;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
@@ -19,6 +20,8 @@ public class DespesasActivity extends Activity {
 	public void criarDespesaOnclick(View v) {
 		Log.d("TelaDespesa", "método criarDespesaOnclick");
 		Toast.makeText(this, "método criarDespesaOnclick", Toast.LENGTH_LONG).show();
+		Intent intent = new Intent(this, CadastroDespesaActivity.class);
+		startActivity(intent);
 	}
 	
 	public void excluirDespesaOnclick(View v) {
