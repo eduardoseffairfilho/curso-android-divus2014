@@ -8,7 +8,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    android:background="#003331"
+    android:background="#3333CC"
     tools:context="com.divus.academia.android.GC2AppBoaViagem.SegundaTelaActivity" >
 
     <TextView
@@ -18,7 +18,7 @@
         android:gravity="center"
         android:text="@string/app_name"
         android:textSize="30sp" 
-        android:textColor="#000000"/>
+        android:textColor="#CCCCCC"/>
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -32,8 +32,9 @@
             android:layout_alignParentLeft="true"
             android:layout_alignParentTop="true"
             android:layout_marginLeft="50dp"
-            android:contentDescription="@string/desc_novo_gasto"
-            android:src="@drawable/novo_gasto" />
+            android:src="@drawable/novo_gasto"
+            android:contentDescription="@string/desc_novo_gasto" 
+            android:onClick="despesasOnclick"/>
 
         <ImageButton
             android:id="@+id/imgNovaViagem"
@@ -44,7 +45,7 @@
             android:layout_marginRight="50dp"
             android:src="@drawable/nova_viagem"
             android:contentDescription="@string/desc_nova_viagem"
-            android:onClick=""/>
+            android:onClick="viagensOnclick"/>
 
         <ImageButton
             android:id="@+id/imgMinhasViagens"
@@ -54,8 +55,9 @@
             android:layout_alignParentLeft="true"
             android:layout_marginLeft="50dp"
             android:layout_marginBottom="20dp"
-            android:contentDescription="@string/desc_minhas_viagens"
-            android:src="@drawable/minhas_viagens" />
+            android:src="@drawable/minhas_viagens"
+            android:contentDescription="@string/desc_minhas_viagens"  
+            android:onClick="minhasViagensOnclick"/>
 
         <ImageButton
             android:id="@+id/imgConfiguracoes"
@@ -66,7 +68,8 @@
             android:layout_marginRight="50dp"
             android:layout_marginBottom="20dp"
             android:src="@drawable/configuracoes"
-            android:contentDescription="@string/desc_configuracoes"/>
+            android:contentDescription="@string/desc_configuracoes" 
+            android:onClick="configuracoesOnclick"/>
         
     </RelativeLayout>
 
