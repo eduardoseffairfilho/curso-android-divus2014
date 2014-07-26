@@ -8,13 +8,14 @@
     <string name="label_usuario">Usuário:</string>
     <string name="label_senha">Senha:</string>
     <string name="label_entrar">Entrar</string>
-    <string name="title_activity_segunda_tela">Segunda Tela</string>
+    <string name="title_activity_segunda_tela">Menu</string>
     <string name="desc_novo_gasto">Novo Gasto</string>
     <string name="desc_nova_viagem">Nova Viagem</string>
     <string name="desc_minhas_viagens">Minhas Viagens</string>
     <string name="desc_configuracoes">Configurações</string>
-    <string name="title_activity_despesas">DespesasActivity</string>
+    <string name="title_activity_despesas">Despesas</string>
     <string name="novo">Novo</string>
     <string name="excluir">Excluir</string>
+    <string name="title_activity_cadastro_despesas">Cadastro Despesa</string>
 
 </resources>
