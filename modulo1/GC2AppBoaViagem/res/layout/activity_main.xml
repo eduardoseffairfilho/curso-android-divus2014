@@ -55,6 +55,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_marginTop="10sp"
-        android:text="@string/label_entrar" />
+        android:text="@string/label_entrar" 
+        android:onClick="loginOnclick"/>
 
 </LinearLayout>
