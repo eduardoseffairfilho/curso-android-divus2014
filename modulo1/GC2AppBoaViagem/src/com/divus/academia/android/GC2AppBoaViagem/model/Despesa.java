@@ -6,6 +6,7 @@ public class Despesa implements Serializable{
 	
 	private static final long serialVersionUID = -3258181198025939021L;
 	
+	private Long id;
 	private String descricao;
 	private String categoria;
 	private double valor;
@@ -23,6 +24,15 @@ public class Despesa implements Serializable{
 		this.data = data;
 		this.local = local;
 	}
+	
+	public Long getId() {
+		return id;
+	}
+
+	public void setId(Long id) {
+		this.id = id;
+	}
+
 	public String getDescricao() {
 		return descricao;
 	}
