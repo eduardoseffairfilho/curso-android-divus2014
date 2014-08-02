@@ -14,6 +14,7 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.Toast;
 
+import com.divus.academia.android.GC2AppBoaViagem.dao.DespesaDAO;
 import com.divus.academia.android.GC2AppBoaViagem.model.Despesa;
 
 public class DespesasActivity extends Activity {
@@ -21,11 +22,16 @@ public class DespesasActivity extends Activity {
 	private ListView lstDespesas;
 	
 	private List<Despesa> listaDespesas = new ArrayList<Despesa>();
+	private DespesaDAO despesaDAO;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_despesas);
+		
+		despesaDAO = DespesaDAO.getInstance(this);
+		
+		listaDespesas = despesaDAO.listarTodos();
 		
 		this.lstDespesas = (ListView) findViewById(R.id.lstDespesas);
 		
