@@ -25,5 +25,6 @@
         <item>Hospedagem</item>
         <item>Outros</item>
     </string-array>
+        <string name="salvar">salvar</string>
 
 </resources>

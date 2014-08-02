@@ -1,5 +1,8 @@
 package com.divus.academia.android.GC2AppBoaViagem;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
@@ -7,21 +10,43 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.ArrayAdapter;
+import android.widget.ListView;
 import android.widget.Toast;
 
+import com.divus.academia.android.GC2AppBoaViagem.model.Despesa;
+
 public class DespesasActivity extends Activity {
+	
+	private ListView lstDespesas;
+	
+	private List<Despesa> listaDespesas = new ArrayList<Despesa>();
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_despesas);
+		
+		this.lstDespesas = (ListView) findViewById(R.id.lstDespesas);
+		
+		ArrayAdapter<Despesa> adapter = new ArrayAdapter<Despesa>(this, android.R.layout.simple_list_item_1, listaDespesas);
+		lstDespesas.setAdapter(adapter);
+	}
+	
+	@Override
+	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+		super.onActivityResult(requestCode, resultCode, data);
+		if (resultCode == Activity.RESULT_OK) {
+			Despesa desp = (Despesa) data.getSerializableExtra("despesa");
+			listaDespesas.add(desp);
+		}
 	}
 	
 	public void criarDespesaOnclick(View v) {
 		Log.d("TelaDespesa", "método criarDespesaOnclick");
 		Toast.makeText(this, "método criarDespesaOnclick", Toast.LENGTH_LONG).show();
 		Intent intent = new Intent(this, CadastroDespesaActivity.class);
-		startActivity(intent);
+		startActivityForResult(intent, 0);
 	}
 	
 	public void excluirDespesaOnclick(View v) {

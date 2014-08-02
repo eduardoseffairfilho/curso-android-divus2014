@@ -21,8 +21,6 @@
                 android:text="Despesa"
                 android:textAppearance="?android:attr/textAppearanceLarge"
                 android:textStyle="bold" />
-
-            
         </LinearLayout>
 
         <TextView
@@ -56,13 +54,13 @@
             <TableRow>
 
                 <EditText
-                    android:id="@+id/valor"
+                    android:id="@+id/edtValorDespesa"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:inputType="numberDecimal" />
 
                 <Button
-                    android:id="@+id/btnData"
+                    android:id="@+id/btnDataDespesa"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
@@ -88,16 +86,17 @@
             android:text="Local" />
 
         <EditText
-            android:id="@+id/local"
+            android:id="@+id/edtLocalDespesa"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="text" />
 
         <Button
+            android:id="@+id/btnSalvarDespesa"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:onClick="registrarGasto"
-            android:text="Gastei" />
+            android:onClick="salvarDespesaOnclick"
+            android:text="@string/salvar" />
     </LinearLayout>
 
 </ScrollView>
