@@ -8,12 +8,15 @@ import android.app.DatePickerDialog.OnDateSetListener;
 import android.app.Dialog;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.Spinner;
+import android.widget.Toast;
 
+import com.divus.academia.android.GC2AppBoaViagem.dao.DespesaDAO;
 import com.divus.academia.android.GC2AppBoaViagem.model.Despesa;
 
 public class CadastroDespesaActivity extends Activity {
@@ -26,10 +29,14 @@ public class CadastroDespesaActivity extends Activity {
 	
 	private int ano, mes, dia;
 	
+	private DespesaDAO despesaDAO;
+	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_cadastro_despesa);
+		
+		despesaDAO = DespesaDAO.getInstance(this);
 		
 		this.spnCategoria = (Spinner) findViewById(R.id.spnCategoria);
 		this.edtDescricao = (EditText) findViewById(R.id.edtDescricao);
@@ -59,11 +66,18 @@ public class CadastroDespesaActivity extends Activity {
 		despesa.setCategoria(spnCategoria.getSelectedItem().toString());
 		despesa.setValor(Double.valueOf(edtValorDespesa.getText().toString()));
 		
-		Intent intent = new Intent();
-		intent.putExtra("despesa", despesa);
-		
-		setResult(Activity.RESULT_OK, intent);
-		finish();
+		try {
+			despesaDAO.salvar(despesa);
+			
+			Intent intent = new Intent();
+			intent.putExtra("despesa", despesa);
+			
+			setResult(Activity.RESULT_OK, intent);
+			finish();
+		} catch (Exception e) {
+			Log.e("ERRO", "Falha ao salvar Despesa!");
+			Toast.makeText(this, "Falha na operação, não foi possível salvar a despesa. Tente novamente!", Toast.LENGTH_LONG).show();
+		}
 	}
 	
 	private String inicializarData() {
