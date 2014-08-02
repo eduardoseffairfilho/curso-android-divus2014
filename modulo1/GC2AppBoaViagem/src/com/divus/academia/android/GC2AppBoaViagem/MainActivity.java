@@ -19,7 +19,9 @@ public class MainActivity extends Activity {
 		setContentView(R.layout.activity_main);
 		
 		edtUsuario = (EditText) findViewById(R.id.edtUsuario);
+		edtUsuario.setText("admin"); // @ TODO Remover depois;
 		edtSenha = (EditText) findViewById(R.id.edtSenha);
+		edtSenha.setText("1234"); // @ TODO Remover depois;
 	}
 	
 	public void loginOnclick(View v) {
