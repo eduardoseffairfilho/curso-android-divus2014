@@ -13,6 +13,8 @@ public class Despesa implements Serializable{
 	private String data;
 	private String local;
 	
+	private boolean selecionado = false;
+	
 	public Despesa() {
 	}
 	
@@ -70,6 +72,14 @@ public class Despesa implements Serializable{
 				+ ", valor=" + valor + ", data=" + data + ", local=" + local
 				+ "]";
 	}*/
+
+	public boolean isSelecionado() {
+		return selecionado;
+	}
+
+	public void setSelecionado(boolean selecionado) {
+		this.selecionado = selecionado;
+	}
 
 	@Override
 	public String toString() {

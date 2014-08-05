@@ -48,6 +48,10 @@ public class DespesaDAO {
 		List<Despesa> lista = construirDespesa(cursor);
 		return lista;
 	}
+	
+	public void deletar(Despesa despesa) {
+		
+	}
 
 	private List<Despesa> construirDespesa(Cursor cursor) {
 		List<Despesa> listaDespesa = new ArrayList<Despesa>();

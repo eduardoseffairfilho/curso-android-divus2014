@@ -10,33 +10,41 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.ArrayAdapter;
+import android.widget.AdapterView.OnItemClickListener;
+import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.Toast;
 
+import com.divus.academia.android.GC2AppBoaViagem.adapter.DespesaAdapter;
 import com.divus.academia.android.GC2AppBoaViagem.dao.DespesaDAO;
 import com.divus.academia.android.GC2AppBoaViagem.model.Despesa;
 
-public class DespesasActivity extends Activity {
+public class DespesasActivity extends Activity implements OnItemClickListener {
 	
-	private ListView lstDespesas;
+	private ListView listViewDespesas;
 	
 	private List<Despesa> listaDespesas = new ArrayList<Despesa>();
 	private DespesaDAO despesaDAO;
+	private DespesaAdapter despesaAdapter;
+	private Despesa despesaSelecionado;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_despesas);
-		
+		/** Obtém uma instancia do DAO de Despesa. */
 		despesaDAO = DespesaDAO.getInstance(this);
+		/** Obtém o componente ListView da tela. */
+		this.listViewDespesas = (ListView) findViewById(R.id.lstDespesas);
 		
-		listaDespesas = despesaDAO.listarTodos();
-		
-		this.lstDespesas = (ListView) findViewById(R.id.lstDespesas);
-		
-		ArrayAdapter<Despesa> adapter = new ArrayAdapter<Despesa>(this, android.R.layout.simple_list_item_1, listaDespesas);
-		lstDespesas.setAdapter(adapter);
+		// @ TODO Trocar por um método.
+		/** Lista no banco de dados todas as despesas. */
+		this.listaDespesas = despesaDAO.listarTodos();
+		/** Cria o Adapter com a lista de despesas. */
+		this.despesaAdapter = new DespesaAdapter(this, listaDespesas);
+		/** Seta no componente de listView o Adapter com a Lista de Despesas. */
+		this.listViewDespesas.setAdapter(despesaAdapter);
+		this.listViewDespesas.setOnItemClickListener(this);
 	}
 	
 	@Override
@@ -53,11 +61,34 @@ public class DespesasActivity extends Activity {
 		Toast.makeText(this, "método criarDespesaOnclick", Toast.LENGTH_LONG).show();
 		Intent intent = new Intent(this, CadastroDespesaActivity.class);
 		startActivityForResult(intent, 0);
+		
+		// @ TODO Trocar por um método
+		/** Lista no banco de dados todas as despesas. */
+		this.listaDespesas = despesaDAO.listarTodos();
+		/** Cria o Adapter com a lista de despesas. */
+		this.despesaAdapter = new DespesaAdapter(this, listaDespesas);
+		/** Seta no componente de listView o Adapter com a Lista de Despesas. */
+		this.listViewDespesas.setAdapter(despesaAdapter);
+		this.listViewDespesas.setOnItemClickListener(this);
 	}
 	
 	public void excluirDespesaOnclick(View v) {
 		Log.d("TelaDespesa", "método excluirDespesaOnclick");
 		Toast.makeText(this, "método excluirDespesaOnclick", Toast.LENGTH_LONG).show();
+		if (despesaSelecionado != null) {
+			despesaDAO.deletar(despesaSelecionado);
+		} else {
+			Toast.makeText(this, "Selecione um registro para poder excluir!", Toast.LENGTH_LONG).show();
+		}
+		
+		// @ TODO Trocar por um método
+		/** Lista no banco de dados todas as despesas. */
+		this.listaDespesas = despesaDAO.listarTodos();
+		/** Cria o Adapter com a lista de despesas. */
+		this.despesaAdapter = new DespesaAdapter(this, listaDespesas);
+		/** Seta no componente de listView o Adapter com a Lista de Despesas. */
+		this.listViewDespesas.setAdapter(despesaAdapter);
+		this.listViewDespesas.setOnItemClickListener(this);
 	}
 
 	@Override
@@ -77,5 +108,15 @@ public class DespesasActivity extends Activity {
 			return true;
 		}
 		return super.onOptionsItemSelected(item);
+	}
+
+	@Override
+	public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+		if (despesaSelecionado != null) {
+			despesaSelecionado.setSelecionado(false);
+		}
+		despesaSelecionado = listaDespesas.get(position);
+		despesaSelecionado.setSelecionado(true);
+		despesaAdapter.notifyDataSetChanged();
 	}
 }
