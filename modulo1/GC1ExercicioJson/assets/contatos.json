@@ -1,0 +1,36 @@
+{"contatos":[{
+	"nome": "Rodrigo",
+	"sobrenome": "Aramburu",
+	"idade":"22",
+	"site":"http://www.botecodigital.info"
+},{
+	"nome": "Manoel",
+	"sobrenome": "Aramburu",
+	"idade":"44",
+	"site":"http://www.botecodigital.info"
+},{
+	"nome": "Paulo",
+	"sobrenome": "Aramburu",
+	"idade":"33",
+	"site":"http://www.botecodigital.info"
+},{
+	"nome": "Sandro",
+	"sobrenome": "Aramburu",
+	"idade":"123",
+	"site":"http://www.botecodigital.info"
+},{
+	"nome": "Maria",
+	"sobrenome": "Aramburu",
+	"idade":"12",
+	"site":"http://www.botecodigital.info"
+},{
+	"nome": "Joana",
+	"sobrenome": "Aramburu",
+	"idade":"21",
+	"site":"http://www.botecodigital.info"
+},{
+	"nome": "Paula",
+	"sobrenome": "Aramburu",
+	"idade":"11",
+	"site":"http://www.botecodigital.info"
+}]}
