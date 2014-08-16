@@ -16,9 +16,9 @@ import android.os.Bundle;
 import android.util.Log;
 import android.widget.ArrayAdapter;
 
-public class ContatoJsonActivity extends ListActivity {
+public class EnderecoJsonActivity extends ListActivity {
 
-	private List<Contato> contatos;
+	private List<Endereco> enderecos;
 
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
@@ -27,9 +27,7 @@ public class ContatoJsonActivity extends ListActivity {
 		JSONObject objJson = createJson();
 		parseJson(objJson);
 
-//		ArrayAdapter<Endereco> adapter = new ArrayAdapter<Endereco>(this, android.R.layout.simple_list_item_1, enderecos);
-//		setListAdapter(adapter);
-		ArrayAdapter<Contato> adapter = new ArrayAdapter<Contato>(this, android.R.layout.simple_list_item_1, contatos);
+		ArrayAdapter<Endereco> adapter = new ArrayAdapter<Endereco>(this, android.R.layout.simple_list_item_1, enderecos);
 		setListAdapter(adapter);
 	}
 
@@ -38,7 +36,7 @@ public class ContatoJsonActivity extends ListActivity {
 		String json = null;
 
 		try {
-			InputStream input = this.getAssets().open("contatos.json");
+			InputStream input = this.getAssets().open("enderecos.json");
 			BufferedReader reader = new BufferedReader(new InputStreamReader(input, "UTF-8"));
 			StringBuilder sb = new StringBuilder();
 			String linha = null;
@@ -61,23 +59,23 @@ public class ContatoJsonActivity extends ListActivity {
 	}
 
 	private void parseJson(JSONObject json) {
-		contatos = new ArrayList<Contato>();
+		enderecos = new ArrayList<Endereco>();
 
 		try {
-			JSONArray jContatos = json.getJSONArray("contatos");
+			JSONArray jContatos = json.getJSONArray("enderecos");
 			for(int i = 0; i < jContatos.length(); i++) {
 				JSONObject jsonObject = jContatos.getJSONObject(i);
-				Contato contato = new Contato();
-				contato.setNome(jsonObject.getString("nome"));
-				contato.setSobrenome(jsonObject.getString("sobrenome"));
-				contato.setIdade(jsonObject.getString("idade"));
-				contato.setSite(jsonObject.getString("site"));
-				contatos.add(contato);
+				Endereco endereco = new Endereco();
+				endereco.setRua(jsonObject.getString("rua"));
+				endereco.setNumero(jsonObject.getString("numero"));
+				endereco.setTelefone(jsonObject.getString("telefone"));
+				endereco.setResponsavel(jsonObject.getString("responsavel"));
+				
+				enderecos.add(endereco);
 			}
 		} catch (JSONException e) {
 			e.printStackTrace();
 		}
-		System.out.println("lista contatos qtd:" + contatos.size());
+		System.out.println("lista enderecos qtd:" + enderecos.size());
 	}
-
 }
