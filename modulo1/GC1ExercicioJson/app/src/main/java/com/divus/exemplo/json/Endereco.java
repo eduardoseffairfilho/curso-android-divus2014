@@ -40,6 +40,6 @@ public class Endereco implements Serializable {
 	
 	@Override
 	public String toString() {
-		return "Endereço: Rua " + rua + ", número " + numero + ". Telefone " + telefone + ". Responsável: " + responsavel;
+		return "EndereÃ§o: Rua " + rua + ", nÃºmero " + numero + ". Telefone " + telefone + ". ResponsÃ¡vel: " + responsavel;
 	}
 }
