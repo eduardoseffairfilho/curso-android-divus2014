@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">GC1ExemploServico</string>
+    <string name="contador">Contador:</string>
+    <string name="action_settings">Settings</string>
+    <string name="pr_ximo">Próximo</string>
+    <string name="title_activity_segunda">SegundaActivity</string>
+    <string name="hello_world">Hello world!</string>
+
+</resources>

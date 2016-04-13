@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/holo_blue_light"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/txtTitulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="35dp"
+        android:text="@string/titulo"
+        android:textColor="#333333"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/txtMensagem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/txtTitulo"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:ellipsize="end"
+        android:maxLines="6"
+        android:text="@string/mensagem" />
+
+    <Button
+        android:id="@+id/btnOpen"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_below="@+id/txtMensagem"
+        android:layout_marginTop="34dp"
+        android:layout_toRightOf="@+id/txtTitulo"
+        android:background="@drawable/ic_open_folder" />
+
+    <Button
+        android:id="@+id/btnRefresh"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/btnOpen"
+        android:layout_toLeftOf="@+id/txtTitulo"
+        android:background="@drawable/ic_sync_button" />
+
+</RelativeLayout>

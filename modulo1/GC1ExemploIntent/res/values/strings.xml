@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">ExemploIntent</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+
+    <string-array name="intents">
+        <item>Abrir Browser</item>
+        <item>Chamada Fone</item>
+        <item>Discagem</item>
+        <item>Abrir Mapa</item>
+        <item>Pesquisa no map</item>
+        <item>Tirar Foto</item>
+        <item>Mostrar Contatos</item>
+        <item>Editar primeiro contato</item>
+    </string-array>
+    
+</resources>

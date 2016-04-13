@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">ExemploProcessoAssincrono</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="atualizar_imagem">Atualizar Imagem</string>
+
+</resources>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">GC1ExemploBroadcast</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="valor_um">Valor 1:</string>
+    <string name="valor_dois">Valor 2:</string>
+    <string name="calcular">Calcular</string>
+
+</resources>

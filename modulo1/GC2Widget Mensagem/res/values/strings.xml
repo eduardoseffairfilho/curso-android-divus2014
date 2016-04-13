@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">WidgetMensagem</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="titulo">Título</string>
+    <string name="mensagem">Mensagem</string>
+    
+    <string-array name="news_headlines">
+        <item>O medo cala a boca dos inocentes e faz prevalecer a verdade dos culpados.  Karl Marx </item>
+        <item>Respeito é a base para qualquer relacionamento.</item>
+        <item>Seja qual for a sua filosofia ou o seu pensamento, não deixe que a sua revolta mude a sua personalidade.</item>
+        <item>Violência nunca é a resposta.</item>
+        <item>Onde não tem espaço para a lealdade, não cabe um relacionamento.</item>
+        <item>Quem se atenta aos detalhes, está mais propenso a vencer.</item>
+        <item>Na guerra, só queremos a paz quando estamos perdendo.</item>
+        <item>Pensamento sem ação é uma ideia que não nasceu para o mundo.</item>
+        <item>Só lembramos do telhado, quando está chovendo.</item>
+        <item>Pessoas que são facilmente influenciadas, serão escravas eternamente.</item>
+        <item>Se eu soubesse antes, o que sei agora, iria embora antes do final.  Engenheiros do Hawaii </item>
+        <item>Objetivos alcançados de modo errado, são objetivos errados.  Code Geass </item>
+        <item>Na propaganda eleitoral nós vemos palhaços, maconheiros, ex-atletas, subcelebridades, religiosos, etc... só não vemos políticos.</item>
+        <item>Para cada idéia boa, muitas ruins vieram antes.</item>
+        <item>Não julgue o livro pela capa. Você pode se surpreender com o conteúdo.</item>
+        <item>Só se sabe o valor de um sorriso, quando passamos pela dor.</item>
+        <item>Um amigo é alguém que sabe tudo de mim e apesar de tudo, gosta de mim.</item>
+    </string-array>
+
+</resources>
