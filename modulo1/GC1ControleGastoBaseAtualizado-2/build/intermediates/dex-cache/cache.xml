@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="C:\Users\EduardoJorge\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-v4\19.1.0\support-v4-19.1.0.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="85f201b380937e61a9dce6ca90ccf6872abbfb67">
+        <dex dex="C:\Users\EduardoJorge\Documents\GitHub\Convertidos\GC1ControleGastoBaseAtualizado-2\app\build\intermediates\pre-dexed\debug\support-v4-19.1.0_22b2c8e35d3b2a40ac9f77e42781a983cb55364f.jar" />
+    </item>
+
+</items>
